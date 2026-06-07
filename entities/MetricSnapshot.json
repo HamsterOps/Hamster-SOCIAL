@@ -1,0 +1,49 @@
+{
+  "name": "MetricSnapshot",
+  "type": "object",
+  "properties": {
+    "date": {
+      "type": "string",
+      "format": "date"
+    },
+    "platform": {
+      "type": "string",
+      "enum": [
+        "instagram",
+        "linkedin",
+        "x",
+        "tiktok",
+        "all"
+      ]
+    },
+    "followers": {
+      "type": "number",
+      "default": 0
+    },
+    "impressions": {
+      "type": "number",
+      "default": 0
+    },
+    "engagements": {
+      "type": "number",
+      "default": 0
+    },
+    "engagement_rate": {
+      "type": "number",
+      "default": 0
+    },
+    "waitlist_signups": {
+      "type": "number",
+      "default": 0
+    },
+    "description": {
+      "type": "string",
+      "maxLength": 1000,
+      "description": "Optional notes about this snapshot"
+    }
+  },
+  "required": [
+    "date",
+    "platform"
+  ]
+}

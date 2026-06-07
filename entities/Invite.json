@@ -1,0 +1,49 @@
+{
+  "name": "Invite",
+  "type": "object",
+  "properties": {
+    "email": {
+      "type": "string",
+      "description": "Invited email address"
+    },
+    "role": {
+      "type": "string",
+      "enum": [
+        "admin",
+        "user"
+      ],
+      "default": "user",
+      "description": "Role to assign"
+    },
+    "token": {
+      "type": "string",
+      "description": "Unique invite token"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "pending",
+        "accepted",
+        "expired"
+      ],
+      "default": "pending",
+      "description": "Invite status"
+    },
+    "expires_at": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Expiry timestamp (7 days from creation)"
+    },
+    "accepted_at": {
+      "type": "string",
+      "format": "date-time",
+      "description": "When the invite was accepted"
+    }
+  },
+  "required": [
+    "email",
+    "role",
+    "token",
+    "status"
+  ]
+}

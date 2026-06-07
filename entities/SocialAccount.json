@@ -1,0 +1,37 @@
+{
+  "name": "SocialAccount",
+  "type": "object",
+  "properties": {
+    "platform": {
+      "type": "string",
+      "enum": [
+        "instagram",
+        "linkedin",
+        "x",
+        "tiktok"
+      ],
+      "description": "Social media platform"
+    },
+    "handle": {
+      "type": "string",
+      "description": "Profile handle or username (e.g. @hamsterapp)"
+    },
+    "profile_url": {
+      "type": "string",
+      "description": "Full profile URL"
+    },
+    "follower_count": {
+      "type": "number",
+      "default": 0,
+      "description": "Current follower count"
+    },
+    "last_updated": {
+      "type": "string",
+      "format": "date-time",
+      "description": "When stats were last manually updated"
+    }
+  },
+  "required": [
+    "platform"
+  ]
+}

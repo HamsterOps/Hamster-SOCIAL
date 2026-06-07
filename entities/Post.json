@@ -1,0 +1,100 @@
+{
+  "name": "Post",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string",
+      "description": "Post title"
+    },
+    "caption": {
+      "type": "string",
+      "description": "Full post caption text"
+    },
+    "platforms": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Target platforms: instagram, linkedin, x, tiktok"
+    },
+    "post_type": {
+      "type": "string",
+      "enum": [
+        "awareness",
+        "education",
+        "social_proof",
+        "hype",
+        "community"
+      ],
+      "description": "Content category"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "draft",
+        "scheduled",
+        "published",
+        "failed"
+      ],
+      "default": "draft"
+    },
+    "hashtags": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Post hashtags"
+    },
+    "media_urls": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Uploaded media file URLs"
+    },
+    "scheduled_date": {
+      "type": "string",
+      "format": "date",
+      "description": "Scheduled publish date"
+    },
+    "scheduled_time": {
+      "type": "string",
+      "description": "Scheduled publish time HH:MM"
+    },
+    "published_date": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Actual published datetime"
+    },
+    "impressions": {
+      "type": "number",
+      "default": 0
+    },
+    "likes": {
+      "type": "number",
+      "default": 0
+    },
+    "comments": {
+      "type": "number",
+      "default": 0
+    },
+    "shares": {
+      "type": "number",
+      "default": 0
+    },
+    "engagement_rate": {
+      "type": "number",
+      "default": 0
+    },
+    "day_number": {
+      "type": "number",
+      "description": "Day number in the 30-day plan"
+    }
+  },
+  "required": [
+    "title",
+    "platforms",
+    "post_type",
+    "status"
+  ]
+}

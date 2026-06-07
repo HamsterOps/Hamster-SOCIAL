@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Alice&family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 40 20% 98%;
+    --foreground: 150 100% 6%;
+    --card: 0 0% 100%;
+    --card-foreground: 150 100% 6%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 150 100% 6%;
+    --primary: 155 100% 10%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 40 15% 94%;
+    --secondary-foreground: 150 100% 6%;
+    --muted: 40 10% 94%;
+    --muted-foreground: 150 10% 40%;
+    --accent: 252 100% 34%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 40% 39%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 40 10% 88%;
+    --input: 40 10% 88%;
+    --ring: 155 100% 10%;
+    --chart-1: 155 100% 10%;
+    --chart-2: 252 100% 34%;
+    --chart-3: 0 40% 39%;
+    --chart-4: 173 58% 39%;
+    --chart-5: 40 74% 56%;
+    --radius: 0.625rem;
+    --font-heading: 'Alice', serif;
+    --font-body: 'Inter', sans-serif;
+    --font-display: 'Alice', serif;
+    --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    --sidebar-background: 155 100% 6%;
+    --sidebar-foreground: 40 20% 92%;
+    --sidebar-primary: 40 20% 98%;
+    --sidebar-primary-foreground: 155 100% 6%;
+    --sidebar-accent: 155 60% 12%;
+    --sidebar-accent-foreground: 40 20% 92%;
+    --sidebar-border: 155 40% 14%;
+    --sidebar-ring: 252 100% 34%;
+  }
+
+  .dark {
+    --background: 155 30% 4%;
+    --foreground: 40 20% 95%;
+    --card: 155 25% 7%;
+    --card-foreground: 40 20% 95%;
+    --popover: 155 25% 7%;
+    --popover-foreground: 40 20% 95%;
+    --primary: 155 60% 45%;
+    --primary-foreground: 155 100% 4%;
+    --secondary: 155 15% 12%;
+    --secondary-foreground: 40 20% 90%;
+    --muted: 155 15% 12%;
+    --muted-foreground: 40 10% 55%;
+    --accent: 252 80% 60%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 50% 45%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 155 15% 15%;
+    --input: 155 15% 15%;
+    --ring: 155 60% 45%;
+    --chart-1: 155 60% 45%;
+    --chart-2: 252 80% 60%;
+    --chart-3: 0 50% 45%;
+    --chart-4: 173 58% 50%;
+    --chart-5: 40 74% 60%;
+    --sidebar-background: 155 30% 3%;
+    --sidebar-foreground: 40 20% 88%;
+    --sidebar-primary: 155 60% 45%;
+    --sidebar-primary-foreground: 155 100% 4%;
+    --sidebar-accent: 155 25% 8%;
+    --sidebar-accent-foreground: 40 20% 88%;
+    --sidebar-border: 155 20% 10%;
+    --sidebar-ring: 252 80% 60%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  body {
+    @apply bg-background text-foreground font-body;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+  }
+}
